@@ -26,6 +26,7 @@
 		05A6E9A02BAEFF9F007554AF /* ArrayIsEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A6E99F2BAEFF9F007554AF /* ArrayIsEmpty.swift */; };
 		05C3134D2BAC51A300867CBF /* PreferenceValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C3134C2BAC51A300867CBF /* PreferenceValue.swift */; };
 		05DD5B6C2BB1F4B500D3A156 /* SizeTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD5B6B2BB1F4B500D3A156 /* SizeTransformer.swift */; };
+		05DD5BAE2BB2330600D3A156 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DD5BAD2BB2330600D3A156 /* Application.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,9 @@
 		05DD5BA22BB21E3700D3A156 /* Release - Library.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release - Library.xcconfig"; sourceTree = "<group>"; };
 		05DD5BA32BB21E3700D3A156 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		05DD5BA52BB21ED700D3A156 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05DD5BAB2BB2330500D3A156 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		05DD5BAC2BB2330600D3A156 /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		05DD5BAD2BB2330600D3A156 /* Application.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 			children = (
 				0518B7A12BAC281B00A26960 /* AboutWindowController.swift */,
 				0518B7A42BAC281B00A26960 /* AboutWindowController.xib */,
+				05DD5BAC2BB2330600D3A156 /* Application.h */,
+				05DD5BAD2BB2330600D3A156 /* Application.m */,
 				0518B7902BAC27A600A26960 /* ApplicationDelegate.swift */,
 				05A6E99F2BAEFF9F007554AF /* ArrayIsEmpty.swift */,
 				0518B7AF2BAC325900A26960 /* BoxView.swift */,
@@ -163,6 +169,7 @@
 		0518B7AA2BAC282200A26960 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				05DD5BAB2BB2330500D3A156 /* Bridging-Header.h */,
 				0518B7922BAC27A800A26960 /* Assets.xcassets */,
 				05DD5BA52BB21ED700D3A156 /* Info.plist */,
 				0518B7942BAC27A800A26960 /* MainMenu.xib */,
@@ -330,6 +337,7 @@
 				TargetAttributes = {
 					0518B78C2BAC27A600A26960 = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 					};
 				};
 			};
@@ -395,6 +403,7 @@
 			files = (
 				05C3134D2BAC51A300867CBF /* PreferenceValue.swift in Sources */,
 				05219C372BAE470D002B838A /* ImageInfo.swift in Sources */,
+				05DD5BAE2BB2330600D3A156 /* Application.m in Sources */,
 				0518B7A52BAC281B00A26960 /* AboutWindowController.swift in Sources */,
 				0518B7AC2BAC313400A26960 /* ImagesSelectionViewController.swift in Sources */,
 				0518B7B02BAC325900A26960 /* BoxView.swift in Sources */,
@@ -444,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SimpleSiril/SimpleSiril.entitlements;
 				INFOPLIST_FILE = SimpleSiril/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
@@ -453,6 +463,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.SimpleSiril";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimpleSiril/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -461,6 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SimpleSiril/SimpleSiril.entitlements;
 				INFOPLIST_FILE = SimpleSiril/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
@@ -470,6 +484,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xs-labs.SimpleSiril";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimpleSiril/Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
