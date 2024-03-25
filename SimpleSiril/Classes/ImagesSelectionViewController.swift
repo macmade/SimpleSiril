@@ -194,17 +194,18 @@ public class ImagesSelectionViewController: NSViewController, NSTableViewDataSou
         self.images = ImageInfo.load( from: url )
         self.icon   = NSWorkspace.shared.icon( forFile: url.path( percentEncoded: false ) )
         self.label1 = url.path( percentEncoded: false )
-        self.label2 = if self.images.count == 0
+
+        if self.images.count == 0
         {
-            "No image"
+            self.label2 = "No image"
         }
         else if self.images.count == 1
         {
-            "1 image"
+            self.label2 = "1 image"
         }
         else
         {
-            "\( self.images.count ) images"
+            self.label2 = "\( self.images.count ) images"
         }
     }
 
